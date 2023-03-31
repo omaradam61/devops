@@ -1,0 +1,111 @@
+Microservices
+What is a Monolith?
+Challenges and why Microservices?
+What are Microservices?
+Benefits and best practices
+Challenges of Microservices
+Communication between Microservices.
+Monorepo vs Polyrepo
+
+Monolith - Before microservices, a monolithic architecture was standard. all components are part of single unit. 1 codebase
+everything is developed, deployed and scaled as 1 unit
+App must be written with 1 tech stack
+Teams need to be careful to not affect each other's work
+1 single artifact, so you must redeploy the entire application on each update.
+
+Challenges of monolithic architecture
+Application is too large and complex
+Parts are more tangled into each other
+You can only scale the entire app, instead of a specific service
+Higher infrastructure costs.
+Difficulty if services need different dependency versions
+Release process takes longer 
+On every change, the entire application needs to be tested
+Entire application needs to be built  and deployed
+Bug in any module can potentially bring down the entire application.
+
+An answer of all these issues is a microservice architecture.
+What is Microservice Architecture?
+with Microservices - Split application into smaller, independent services.
+very important questions when we create a microservices architecture.
+1. how to break down the application
+2. What code goes where?
+3. How many services do we create?
+4. How big/small should they be?
+5. How do they communicate?
+the best practice is break-down the application into components or into microservices based on bussiness functionalities and not technical functionalities.
+e.g microservice of an online shop application will be
+products, shopping cart, user, checkout and so on.
+all these are business features. and interms of size each microservice must do just 1 isolated thing.
+separation of concerns:
+1 service for 1 specific job.
+
+very important characteristic of each microservice is that they should be: Self-contained & Independent
+each service should Develop, deployed and scaled separately even though they're part of same application. this is called louse coupled.
+Services can be built and deployed separately.
+Each microservice has its own version
+
+Communication b/w Services
+very common way for microservice communication 	is using API calls 
+Each service has its own API
+They can talk to each other,  by sending requests to the respective API endpoint.
+This is Synchronous communication where one service sends request to another service and waits for the response.
+Another common way of communication b/w microservices is using Message Broker. with Asychronous communication.
+communication via messages. Services will send messages first to intermediary message service or broker such as RabbitMQ and then message broker will forward that message to respective service.
+Third way of communication b/w microservices which is becoming popular especially in kubernetes is using Service Mesh with service mesh you've kind of a helper service which takes over the complete communication logic so you don't have to code this logic into the microservices and have this communication logic kind of delegated to this external service. 
+All of these isolated microservices that communicates using api or message brokers you can even develop each service with a different programming language. and you can have dedicated teams for each service that can choose their own technology stack and work on their service without affecting or being affected by other service teams. and this is exactly the most important advantage of microservice architecture compared to the monolith.
+
+Downsides of Microservices.
+Microservices introducted new challenges.
+Added complexity just by the fact that a microservice applicaation is a distributed system.
+one of the complexities may be configuring the communication b/w services.
+More difficult to monitor with multiple instances of each service distributed acros servers.
+but there are various tools for making all this easier even though the microservices architecture is complex there are alot of tools and still more being developed regularly to make running microservices applications easier. 
+the most popular tool for managing microservices is kubernetes which is a perfect platform for running large microservices applications.
+
+CI/CD Pipeline for Microservice.
+obviously an important element of deploying microservices is CI/CD pipleline 
+
+Monorepo vs Polyrepo
+Microservices is when application components get developed and deployed separately as individual micro applications. the question is How do we manage the code for microservices application in a git repository like a gitlab. with microservices application we have two options for how the code is managed monorepo which stands for single repository and polyrepo also multi repository
+Monorepo means using 1 git repository that contains many projects.
+1 codebase with folders - A directory for each service/project.
+Makes the code management and development easier.
+Clone and work only with 1 repo
+Changes can tracked together, tested together and released together.
+Share code and configurations such as infrastructure as code and Libraries.
+Challenges of Monorepo
+tight coupling of projects
+Easier to break this criterion and develop more tightly coupled code
+Big source code, means git interactions becomes slow.
+Additional logic necessary to make sure only service is built and deployed which had code changes.
+All projects and teams are affected, if there is some issue.
+many big companies like google or facebook use monorepos
+they developed tools to scale build systems and version control with a large volume of code.
+
+Polyrepo
+1 repository for each service
+code is completely isolated 
+clone and work on them separately
+In gitlab you have projects to configure connected projects together (Groups)
+helps to keep an overview
+create shared secrets, ci/cd variables, runners.
+ci/cd for polyrepo
+Own pipeline for each repository.
+
+Downsides of Polyrepo
+Cross-cutting changes is more difficult
+Changes spreaded acros projects must be submitted as separate merge requests instead of having a single, atomic MR.
+Switching between projects tedious.
+Searching, testing and debugging is more difficult.
+Sharing resource more difficult.
+
+Both have pros and cons
+Monorepo is for smaller microservice applications.
+
+Polyrepo is for separate teams / better access control
+	Have complete isolation / Smaller code bases.
+	Own Piplelines etc.
+
+
+
