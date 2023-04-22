@@ -1,0 +1,103 @@
+Devops
+Introduction
+Why Learning Devops
+	Devops is one of the top skills employers are looking for in the IT industry
+	One of the highly paid jobs
+	All companies making software delivery better constantly and continously, at enourmous phase.
+	Everyone Needs DevOps. Anyone who wants their product and their feature delivered faster to users needs
+	DevOps.
+
+What is DevOps?
+SDLC process (Software Development Lifecycle)
+1. Requirement gathering
+2. Planning 
+3. Designing
+4. Development
+5. Testing
+6. Deploy and maintain
+
+Models in SDLC.
+Waterfall 
+Agile
+Spiral
+Big bang
+etc
+
+DevOps lifecycle
+code 
+code build
+code test
+code analysis
+delivery
+db/security/os changes
+software testing
+deploy to prod
+go live
+user approval
+
+What is CI?
+Continous integration is an automated process in DevOps, which generates software and its features quickly and efficiently
+CI - the goal of ci is to detect defects at very early stage.
+
+DevOps Tools
+IDE 
+eclipse
+visual studio or vscode
+atom
+pycharm
+and many more
+
+Version Control system
+git
+svn
+tfs
+perforce
+etc
+
+Build tools
+maven and gradle
+msbuild, visual build
+ibm urban code
+make 
+grunt
+
+Software repository - to store artifacts
+sonatype nexus
+jfrog artifactory
+archiva
+cloudsmith package
+grunt
+
+CI tools
+jenkins
+cirecleci
+teamcity
+bamboo ci
+cruise control
+
+
+What is Continous delivery?
+Continous delivery is an automated process of delivering code changes to servers quickly and effeciently at an enourmous phase.
+CD is extension of 	CI 
+
+deployment is not only shipping software to the server.
+its more than that.
+
+Deployment 
+server provisioning
+install dependencies
+conf changes
+network
+artifact deploy
+and more.
+
+any and every step in deployment should be automated.
+
+Tools
+Ansible, puppet, chef for system automation
+Terraform, cloudformation for cloud infrastructure automation.
+Jenkins, octopus deploy for CI/CD automation
+helm charts, code deploy and more.
+
+software testing also has to be automated.
+functional, load, performance, db, security, any other test.
