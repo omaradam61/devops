@@ -1,0 +1,89 @@
+Section 1: Introduction - AWS Certified Solutions Architect
+Course Introduction
+Creating an AWS Account
+AWS Activation Troubleshooting
+
+Section 2: Code and Slides Download
+
+Section 3: Getting Started with AWS
+AWS Cloud Overview - Regions & AZ
+Tour of the AWS Console & Services in AWS
+About UI changes
+
+Section 4: IAM & AWS CLI
+IAM Introduction: Users, Groups, Policies
+IAM Policies
+IAM MFA Overview
+AWS Access Keys, CLI and SDK
+AWS CLI setup (macosx, linux, windows)
+AWS CloudShell: Region Availability
+IAM Roles for AWS Services
+IAM Security tools
+IAM Best practices.
+IAM Summary.
+IAM & AWS CLI Quiz
+
+Section 5: EC2 Fundamentals
+AWS Budget Setup
+EC2 Basics
+Create an EC2 instance with EC2 User data to Have website (Hands on)
+EC2 Instance Types Basics
+Security Groups Hands On
+SSH Overview
+How to SSH using Linux, mac or windows
+SSH troubleshooting
+EC2 instance connect
+EC2 Instance purchasing options
+Spot Instances & Spot Fleet
+EC2 Fundamentals Quiz
+
+Section 6: EC2 - Solutions Architect Level
+Private vs Public vs Elastic IP
+EC2 placement groups
+Elastic Network Interfaces (ENI) - overview
+ENI Extra reading
+EC2 Hibernate
+EC2 SAA Level Quiz
+
+Section 7: EC2 Instance Storage.
+EBS Overview
+EBS Hands On
+EBS Snapshots
+AMI Overview
+AMI Hands On
+EC2 Instance Store
+EBS Volume Types
+EBS Multi-Attach
+EBS Encryption
+Amazon EFS 
+EFS vs EBS
+EBS & EFS - section clean up
+ECE Data Management Quiz
+
+
+Section 8: High Availability and Scalability ELB & ASG
+Section 9: AWS Fundamentals: RDS + Aurora + ElasticCache
+Section 10: Route 53
+Section 11: Classic Solutions Architecture Discussions
+Section 12: Amazon S3 Introduction
+Sectino 13: Advanced Amazon S3
+Section 14: Amazon S3 Security
+Section 15: CloudFront & AWS Global Accelerator
+Section 16:  AWS Storage Extras
+Section 17: Decoupling applications: SQS, SNS, Kinesis, Active MQ
+Section 18: Containers on AWS: EC2, Fargate, ECR & EKS.
+Section 19: Serverless Overviews from a Solution Architect Perspective
+Section 20: Serverless Solution Architecture Discussions
+Section 21: Databases in AWS
+Section 22: Data & Analytics
+Section 23: Machine Learning
+Section 24: AWS Monitoring & Audit: CloudWatch, CloudTrail & Config
+Section 25: Identity and Access Management (IAM) Advanced
+Section 26: AWS Security & Encryption: KMS, SSM Parameter Store, CloudHSM, Shield, WAF
+Section 27: Networking - VPC
+Section 28: Disaster Recovery & Migrations
+Section 29: More Solution Architectures
+Section 30: Other Services
+Section 31: WhitePapers and Architectures - AWS Certified Solutions Architect Associate
+Section 32: Preparing for Exam + Practice Exam AWS Certified Solutions Architect Associate
+Section 33: AWS Certified Solutions Architect Associate
