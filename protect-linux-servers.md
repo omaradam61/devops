@@ -1,14 +1,14 @@
-Protect Linux servers
-1. Update your software Operating system and applications
+# How to Protect Linux servers
+## 1. Update your software Operating system and applications
 install unattend upgrade package - to install any security updates automatically.
 sudo apt install unattended-upgrades
 sudo dpkg-reconfigure --priority=low unattended-upgrades
 make sure unattended package working 
 sudo unattended-upgrade --dry-run --debug
 
-2. Do not forget to update your containers - like watchtower.
+## 2. Do not forget to update your containers - like watchtower.
 
-3. Secure your SSH access
+## 3. Secure your SSH access
 ssh its very secure itself most problems with ssh is just of results bad habits people make. When whenever you are using credentionals to authenticate via ssh make sure you are always using strong password. if you want to avoid using passwords compeletely is even better and more comfortable to use private and public ssh keys because you don't have to remember any credentionals and also avoid re-using password accidentally.
 create new user.
 useradd username -m -s /bin/bash -c "administrative user"
@@ -18,17 +18,17 @@ passwd username
 you can authenticate username and its password to log in to the system and also you can add private and public keys to get rid of entering a password authentication. to do that from whenever you want to authenticate to your linux server
 
 on the client
-ssh-keygen -b 4096 -C "comment or describtion"
+``` ssh-keygen -b 4096 -C "comment or describtion" ```
 enter your phassphrase: passphrase protects your private key from being used by someone who doesn't know the passphrase. without passphrase anyone who gains access to your computer has the potential to copy your privatekey.
 two files will be created public key and private key.
   private should never share with anyone its like your root user password. but the public key you can share it with anyone and you can distribute all your servers and you can use that corresponding private key to authenticate to all the users where you have distributed your public key to.
 
-scp id_rsa.pub user@hostname:/home/username/.ssh/authorized_keys
-sudo chown -R user:group .ssh
+``` scp id_rsa.pub user@hostname:/home/username/.ssh/authorized_keys
+sudo chown -R user:group .ssh ```
 
 configure ssh to accept only authentication via private and public key pass which is good idea. and disable root users login via ssh 
 
-sudo vim /etc/ssh/sshd_config
+``` sudo vim /etc/ssh/sshd_config ```
 PermitRootLogin yes to no
 PasswordAuthentication yes to no
 sudo systemctl restart ssh
