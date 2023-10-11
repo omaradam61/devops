@@ -1,7 +1,8 @@
-Learn PostgreSQL Tutorial
-What is Database.
-What is SQL and Relational Database
-What is PostgreSQL AKA Postgres
+# Learn PostgreSQL Basics and Commands
+
+## What is Database.
+## What is SQL and Relational Database
+## What is PostgreSQL AKA Postgres
 PostgreSQL Installation
 Setup PSQL (MacOS/Windows/Linux)
 How to create Database
@@ -59,18 +60,19 @@ UUID as Primary keys.
 
 Create a DATABASE.
 
-CREATE DATABASE test;
-\l
+``` CREATE DATABASE test; ```
+
+``` \l ```
 
 Connect to a Database.
-psql --help
+``` psql --help ```
 Run this command billow from terminal out of psql terminal.
-psql -h localhost -p 5432 -U user databaseName
+``` psql -h localhost -p 5432 -U user databaseName ```
 
-\c databaseName
+``` \c databaseName ```
 
 A dangerous command.
-DROP DATABASE databaseName;
+``` DROP DATABASE databaseName; ```
 
 Create Table with postgres.
 CREATE TABLE table_name (
@@ -87,13 +89,14 @@ CREATE TABLE person (
 	)
 
 Create table with constraints.
-CREATE TABLE person (
+``` CREATE TABLE person (
 	id BIGSERIAL NOT NULL PRIMARY KEY,
 	first_name VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	gender VARCHAR(5) NOT NULL,
 	date_of_birth DATE NOT NULL
 );
+```
 
 Insert records into tables.
 INSERT INTO person (
