@@ -2,6 +2,9 @@
 
 ## installing cockpit
 `` sudo apt install cockpit ``
+
+`` sudo systemctl enable cockpit `` 
+
 `` sudo systemctl status cockpit ``
 
 - ip-address of yourserver and port 9090
